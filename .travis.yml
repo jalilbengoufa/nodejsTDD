@@ -1,8 +1,18 @@
 language: node_js
 node_js:
-  - "node"
-  - "8"
+- node
+- '8'
 services:
-  - mysql
+- mysql
 before_install:
-  - mysql -u root --password="" < test/travis.sql
+- mysql -u root --password="" < test/travis.sql
+deploy:
+  provider: heroku
+  api_key:
+    secure: KEY
+  app: nodejs_TDD
+  on:
+    repo: jalilbengoufa/nodejsTDD
+env:
+  global:
+    secure: Rgm0WlRCiKGGFyBsTMCVysKNlUW4wsdtIWgqBorxUXllv1EayuZ9K9vaTnvcHs/m5DVjah8bDOFPP7zwArqX2CxKlX8ybBs4z3iyopXkfK55W7uuS5y103txLgHpDIn8y5iH6w7PL891AxmPz4tV2sKTEqmtRHCFzHr5+lMgbcJl5gcGEGuHFWOka18nrDscNqKnMWDJYbHs18GLqsvOyWu6cAh6EO5vjWFjdHp6lTOQu4nWquSqD0p5GRRuj12L1kqrEl40GVNY3OzWiBGH/XRdqUZt7Ze/4ikKpCoe9uzJ9eUXLx8sxgckFAvRwcpzOo+iTg2CbhRWLaxFZhGrkhTJaCNEXSJWE1oHjduFk1h2WejLAf3vrmRLRNIkkOA6cMFzHyEswCFjDwdkD3wy1TvXmJwYmvAPrT/9vFpzWHNbNcQG2khgMjbtaam71k8N1zYZqepxYwLW5D/47n24MBK3CCA2r7lfsyaKT8lYcuPZjSVrJrHvtdfYc/6MP1bsASMmIEkjEBNufDOKjt5YuFcWtKsKo9HR1fFUUv1jY/3hoqx3bJ4tn5mW1HvY940rQyRrSHpqE82SJjKfzzsz1USZ5qajxYJDCpKUKOXxFuMfAS0/Xq7aO/y0/tUqrQnc4e72EaarfwbQx90T2on2yhuXRXl92AI8r28P5vDRUF0=
