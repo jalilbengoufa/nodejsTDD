@@ -1,0 +1,26 @@
+{
+  "name": "nodejstdd",
+  "version": "1.0.0",
+  "description": "testting nodejs and mysql with tdd approche",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=dev && node index.js",
+    "test": "mocha --timeout 10000"
+  },
+  "author": "jalil bengoufa",
+  "license": "ISC",
+  "dependencies": {
+    "chai-http": "^4.2.1",
+    "express": "^4.16.4",
+    "jshint": "^2.9.7",
+    "sinon": "^7.2.2"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "mocha": "^5.2.0",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.9"
+  }
+}
